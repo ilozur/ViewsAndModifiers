@@ -7,59 +7,30 @@
 
 import SwiftUI
 
-struct Watermark: ViewModifier {
-    var text: String
+struct GridStack<Content: View>: View {
+    let rows: Int
+    let columns: Int
     
-    func body(content: Content) -> some View {
-        ZStack(alignment: .bottomTrailing) {
-            content
-            
-            Text(text)
-                .font(.caption)
-                .foregroundColor(.white)
-                .padding(5)
-                .background(.black)
+    @ViewBuilder let content: (Int, Int) -> Content
+    
+    var body: some View {
+        VStack{
+            ForEach(0..<rows, id: \.self) { row in
+                HStack {
+                    ForEach (0..<columns, id: \.self) { column in
+                        content(row, column)
+                    }
+                }
+            }
         }
-    }
-}
-
-extension View {
-    func watermarked(with text: String) -> some View {
-        modifier(Watermark(text: text))
-    }
-}
-
-struct Title: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.largeTitle)
-            .foregroundColor(.white)
-            .padding()
-            .background(.blue)
-            .clipShape(RoundedRectangle(cornerRadius: 10))
-    }
-}
-
-extension View {
-    func titleStyle() -> some View {
-        modifier(Title())
     }
 }
 
 struct ContentView: View {
     var body: some View {
-        VStack {
-            Color.blue
-                .frame(width: 300, height: 300)
-                .watermarked(with: "podlegaev.com")
-                .clipShape(RoundedRectangle(cornerRadius: 20))
-                .padding(50)
-                .shadow(color: .blue, radius: 10)
-                
-            Text("Hello, world!")
-                .modifier(Title())
-            Text("Goodbye, friend!")
-                .titleStyle()
+        GridStack(rows: 4, columns: 4) {row, col in
+            Image(systemName: "\(row * 4 + col).circle")
+            Text("R\(row) C\(col)")
         }
     }
 }
