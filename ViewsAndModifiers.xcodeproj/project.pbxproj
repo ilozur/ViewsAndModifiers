@@ -11,6 +11,7 @@
 		BE93929E29DD6FE000D11D38 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE93929D29DD6FE000D11D38 /* ContentView.swift */; };
 		BE9392A029DD6FE200D11D38 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE93929F29DD6FE200D11D38 /* Assets.xcassets */; };
 		BE9392A329DD6FE200D11D38 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BE9392A229DD6FE200D11D38 /* Preview Assets.xcassets */; };
+		BE9392AA29DD705600D11D38 /* Overview.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE9392A929DD705600D11D38 /* Overview.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		BE93929D29DD6FE000D11D38 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		BE93929F29DD6FE200D11D38 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BE9392A229DD6FE200D11D38 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		BE9392A929DD705600D11D38 /* Overview.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Overview.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +55,7 @@
 			children = (
 				BE93929B29DD6FE000D11D38 /* ViewsAndModifiersApp.swift */,
 				BE93929D29DD6FE000D11D38 /* ContentView.swift */,
+				BE9392A929DD705600D11D38 /* Overview.swift */,
 				BE93929F29DD6FE200D11D38 /* Assets.xcassets */,
 				BE9392A129DD6FE200D11D38 /* Preview Content */,
 			);
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BE9392AA29DD705600D11D38 /* Overview.swift in Sources */,
 				BE93929E29DD6FE000D11D38 /* ContentView.swift in Sources */,
 				BE93929C29DD6FE000D11D38 /* ViewsAndModifiersApp.swift in Sources */,
 			);
