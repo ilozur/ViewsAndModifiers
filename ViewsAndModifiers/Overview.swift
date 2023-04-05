@@ -9,11 +9,27 @@ import SwiftUI
 
 struct Overview: View {
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
-            .frame(maxWidth: .infinity, maxHeight: .infinity)
-            .background(.indigo)
+        Button(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/) {
+            print(type(of: self.body))
+        }
+            .padding()
+            .background(.red)
+            .padding()
+            .background(.orange)
+            .padding()
+            .background(.yellow)
+            .padding()
+            .background(.green)
+            .padding()
+            .background(.cyan)
+            .padding()
+            .background(.blue)
+            .padding()
+            .background(.purple)
+            .clipShape(RoundedRectangle(cornerRadius: 15))
             .foregroundColor(.white)
-            .font(.largeTitle.bold())
+            .frame(maxWidth: .infinity, maxHeight: .infinity)
+            .background(.primary)
     }
 }
 
